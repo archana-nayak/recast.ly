@@ -85,10 +85,12 @@ body {
 }
 
 h5 {
-  border: 2px solid red;
+  border: 2px;
   text-align: center;
   padding: 10px;
 }
+
+/*solid red*/
 
 @media (max-width: 767px) {
   .video-list {
