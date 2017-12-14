@@ -1,25 +1,61 @@
-var App = () => (
-  <div>
-    <nav className="navbar">
-      <div className="col-md-6 offset-md-3">
-        <div id="search">
-          <div><h5><em>search <Search/></em></h5></div>
+// var App = () => (
+//   <div>
+//     <nav className="navbar">
+//       <div className="col-md-6 offset-md-3">
+//         <div id="search">
+//           <div><h5><em>search <Search/></em></h5></div>
             
+//         </div>
+//       </div>
+//     </nav>
+//     <div className="row">
+//       <div className="col-md-7">
+//         <div id="player"><h5><VideoPlayer video={window.exampleVideoData[0]}/></h5></div>
+//       </div>
+//       <div className="col-md-5">
+//         <div id="list">
+//           <VideoList videos={window.exampleVideoData}/>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// );
+
+class App extends React.Component {
+  
+  constructor(props) {
+    super(props); // 
+    // this.state = props.videos;
+    console.log('in app ', props);
+  }
+
+  render () {
+    return (
+      <div>
+        <nav className="navbar">
+          <div className="col-md-6 offset-md-3">
+            <div id="search">
+              <div><h5><em>search <Search/></em></h5></div>
+                
+            </div>
+          </div>
+        </nav>
+        <div className="row">
+          <div className="col-md-7">
+            <div id="player"><h5><VideoPlayer video={window.exampleVideoData[0]}/></h5></div>
+          </div>
+          <div className="col-md-5">
+            <div id="list">
+              <VideoList videos={window.exampleVideoData}/>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
-    <div className="row">
-      <div className="col-md-7">
-        <div id="player"><h5><VideoPlayer video={window.exampleVideoData[0]}/></h5></div>
-      </div>
-      <div className="col-md-5">
-        <div id="list">
-          <VideoList videos={window.exampleVideoData}/>
-        </div>
-      </div>
-    </div>
-  </div>
-);
+    
+    );
+  }
+}
+ 
 
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined
@@ -28,3 +64,6 @@ window.App = App;
 
 // 
 // 
+
+
+// }
