@@ -3,6 +3,7 @@ var VideoListEntry = (props) => {
   var onTitleClick = (event) => {
     console.log('not implemented yet');
   };
+  
   return (
     <div className="video-list-entry media">
       <div className="media-left media-middle">
