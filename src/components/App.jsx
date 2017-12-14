@@ -25,8 +25,8 @@ class App extends React.Component {
   
   constructor(props) {
     super(props); // 
-    // this.state = props.videos;
-    console.log('in app ', props);
+    this.state = {videos: window.exampleVideoData};
+    // console.log('in app ', props);
   }
 
   render () {
@@ -42,11 +42,11 @@ class App extends React.Component {
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <div id="player"><h5><VideoPlayer video={window.exampleVideoData[0]}/></h5></div>
+            <div id="player"><h5><VideoPlayer video={this.state.videos[0]}/></h5></div>
           </div>
           <div className="col-md-5">
             <div id="list">
-              <VideoList videos={window.exampleVideoData}/>
+              <h5><VideoList videos={this.state.videos}/></h5>
             </div>
           </div>
         </div>
