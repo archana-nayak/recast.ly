@@ -15,7 +15,7 @@ class VideoList extends React.Component {
     return (
       <div>
         {this.props.videos.map(video => {
-          return <VideoListEntry video={video}/>;
+          return <VideoListEntry video={video} onClick={this.props.onClick} />;
         })}
       </div>
     
