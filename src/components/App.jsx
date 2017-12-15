@@ -26,28 +26,33 @@ class App extends React.Component {
   constructor(props) {
     super(props); // 
     this.state = {
-      videos: window.exampleVideoData,
-      video: window.exampleVideoData[0],
-      done: false
+      videos: exampleVideoData,
+      extraVideos: window.youTubeVideoData,
+      video: exampleVideoData[0],
     };
+  }
+  
+  displaySearchResult(youTubeVideos) {
+    this.setState({
+      video: youTubeVideos[0],
+      videos: youTubeVideos
+    });
   }
   
   handleVideoClick(value) {
     
     this.setState({
       video: value,
-      done: !this.state.done
     });
   }
   
-
   render () {
     return (
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
             <div id="search">
-              <div><h5><em>search <Search/></em></h5></div>
+              <div><h5><em>search <Search handleSearch={this.displaySearchResult.bind(this)}/></em></h5></div>
                 
             </div>
           </div>
@@ -72,3 +77,5 @@ class App extends React.Component {
 // In the ES6 spec, files are "modules" and do not share a top-level scope
 // `var` declarations will only exist globally where explicitly defined
 window.App = App;
+
+//AIzaSyCZI8rHy4F1uSsxbG8y6JVn4qXw_s0hC28
